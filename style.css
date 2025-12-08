@@ -1,8 +1,16 @@
 body{
     margin: 0;
     padding: 0;
+
 }
 
+h1 h2 h3 h4 h5 h6{
+    font-family: serif;
+}
+
+p{
+    font-family: sans-serif;
+}
 /* Css Code For Header */
 .header {
     overflow: hidden;
@@ -38,3 +46,52 @@ body{
 }
 
 /* End Of Header */
+
+/* Start of the footer */
+
+footer{
+    background-color: #901b22;
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.footerGrid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.footerTitle { 
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+.footerLinks { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.credit{
+    display: inline;
+}
+
+.footerLinks ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 10px;
+    text-align: right;
+}
+
+.footerLinks li {
+    list-style-type: none; 
+    padding: 0;
+    margin: 10px;
+}
+
+
+.footerLinks a {
+    color: white;
+    margin:10px;
+    text-decoration: none; 
+}
