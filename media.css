@@ -1,0 +1,33 @@
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Assets/photo6.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-position: center; 
+}
+
+.title h2 {
+    margin: 0;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.37);
+    color: #ffffff;
+    padding: 10px 20px; 
+}
+
+video{
+    width: 700px;
+}
+
+.movieBox {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.movieImg { grid-area: 1 / 1 / 2 / 2; }
+.movieText { grid-area: 2 / 1 / 3 / 2; }
