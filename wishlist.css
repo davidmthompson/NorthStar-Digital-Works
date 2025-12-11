@@ -1,137 +1,235 @@
-        .grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            padding: 2rem;
-            width: 100%;
-            max-width: 1200px;
-            box-sizing: border-box; /* Ensures padding doesn't overflow width */
-        }
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+}
 
-        /* Cards */
-        .card {
-            background: white;
-            border-radius: 24px;
-            padding: 24px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+h4 {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
+#addBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
 
-        h4 {
-            font-size: 1.125rem;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            color: #111827;
-        }
+.grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
 
-     
+/* --- Cards --- */
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; 
+    box-sizing: border-box;
+}
 
-        .cardBtns {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-        }
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
-        .ok { color: #22C55E; border-radius: 10px; }
-        .exit { color: #EF4444; border-radius: 10px; }
+.card-image {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
 
+.cardBtns {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    flex-wrap: wrap; 
+}
 
+.ok { 
+    color: #22C55E;
+    border-radius: 10px; 
+    border: 1px solid #22C55E; 
+    background: white;
+    padding: 8px 16px;
+    cursor: pointer;
+}
 
-        .ok:hover { background-color: #22C55E; color: white; }
-        .exit:hover { background-color: #EF4444; color: white; }
+.exit { 
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid #ccc; 
+    padding: 8px 16px;
+    cursor: pointer;
+}
 
-        /* --- Modal Basics --- */
-        #modal-backdrop {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
+/* --- Modal Basics --- */
+#modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px; 
+} 
 
-        #modal-backdrop[hidden] {
-            display: none;
-        }
+#modal-backdrop[hidden] {
+    display: none;
+}
 
-        .modal {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 400px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
 
-        .modal-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
-        .modal-head h3 { margin: 0; font-size: 1.2rem; }
+.modal-head h3 { margin: 0; font-size: 1.2rem; }
 
-        .icon-btn {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
 
-        #new-task-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+#new-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-        #new-task-form input,
-        #new-task-form textarea {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-family: inherit;
-        }
+#new-task-form input,
+#new-task-form textarea {
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    width: 100%; 
+    box-sizing: border-box;
+}
 
-        #new-task-form input:focus,
-        #new-task-form textarea:focus {
-            outline: none;
-            border-color: #666;
-        }
+#new-task-form input:focus,
+#new-task-form textarea:focus {
+    outline: none;
+    border-color: #666;
+}
 
-        .modal-actions {
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-            margin-top: 10px;
-        }
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
 
-        .modal-actions button {
-            padding: 8px 16px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            background: #f5f5f5;
-            cursor: pointer;
-        }
+.modal-actions button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
-        .modal-actions .primary {
-            background: black;
-            color: white;
-            border: none;
-        }
+.modal-actions .primary {
+    background: black;
+    color: white;
+    border: none;
+}
 
-        label {
-            display: flex;
-            flex-direction: column;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+#cancel-modal {
+    background-color: #EF4444;
+    color: white;
+    border: none;
+}
+
+#submitBtn {
+    background-color: #22C55E;
+    color: white;
+    border: none;
+}
+
+/* =================================== */
+/* 2. MEDIA QUERY BREAKPOINTS          */
+/* =================================== */
+
+/* --- MOBILE DEVICES (Portrait) --- */
+@media only screen and (max-width: 600px) {
+
+    .grid {
+        padding: 1rem; 
+        gap: 1rem;
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        padding: 15px; 
+    }
+    
+    .cardBtns {
+        flex-direction: column;
+    }
+    
+    .cardBtns button {
+        width: 100%; 
+        text-align: center;
+    }
+
+    /* Modal adjustments */
+    .modal {
+        width: 95%; 
+        padding: 15px;
+    }
+
+    .modal-actions {
+        flex-direction: column; 
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
+}

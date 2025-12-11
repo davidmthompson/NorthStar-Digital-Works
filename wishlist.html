@@ -29,13 +29,13 @@
         
  
         <h1> Christmas wish list</h1>
-        <button id="addBtn"><span class="material-symbols-outlined">add</span></button>
+        <button id="addBtn"><span class="material-symbols-outlined">Add To Wishlist</span></button>
 
 
     <div id="modal-backdrop" class="modal-backdrop" hidden>
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <header class="modal-head">
-                <h3 id="modal-title">New Task</h3>
+                <h3 id="modal-title">New Wishlist Item</h3>
                 <button type="button" id="close-modal" class="icon-btn" aria-label="Close">✕</button>
             </header>
 
@@ -46,8 +46,13 @@
                 </label>
 
                 <label>
-                    Description
-                    <textarea id="task-desc" name="desc" rows="3" placeholder="Optional details…"></textarea>
+                 Photo Link
+                    <textarea id="task-photo" name="photo" rows="3" placeholder="Optional details…"></textarea>
+                </label>
+
+                   <label>
+                 Link
+                    <textarea id="task-link" name="desc" rows="3" placeholder="Add Link"></textarea>
                 </label>
 
                 <div class="modal-actions">
@@ -59,6 +64,8 @@
     </div>
 
     <section class="grid" id="todo-section">
+
+        
         </section>
     </main>
     
