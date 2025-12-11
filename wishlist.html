@@ -26,7 +26,40 @@
 
     <!-- Main Content -->
     <main>
-        <h2>Wishlist</h2>
+        
+ 
+        <h1> Christmas wish list</h1>
+        <button id="addBtn"><span class="material-symbols-outlined">add</span></button>
+
+
+    <div id="modal-backdrop" class="modal-backdrop" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <header class="modal-head">
+                <h3 id="modal-title">New Task</h3>
+                <button type="button" id="close-modal" class="icon-btn" aria-label="Close">✕</button>
+            </header>
+
+            <form id="new-task-form" autocomplete="off">
+                <label>
+                    Title
+                    <input id="task-title" name="title" required placeholder="e.g., Buy groceries">
+                </label>
+
+                <label>
+                    Description
+                    <textarea id="task-desc" name="desc" rows="3" placeholder="Optional details…"></textarea>
+                </label>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancel-modal">Cancel</button>
+                    <button type="submit" class="primary" id="submitBtn">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="grid" id="todo-section">
+        </section>
     </main>
     
 
