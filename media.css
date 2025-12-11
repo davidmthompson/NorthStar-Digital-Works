@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-image: url("/Assets/photo6.jpg");
+    background-image: url("./Assets/photo6.jpg");
     height: 60vh;
     background-size: cover;
     background-position: center; 

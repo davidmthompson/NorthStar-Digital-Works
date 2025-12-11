@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/Assets/homeBg.png");
+    background-image: url("./Assets/homeBg.png");
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -41,8 +41,8 @@
     object-fit: cover;
 }
 
-.photoBox1 { background-image: url("/Assets/photo2Desktop.png"); }
-.photoBox2 { background-image: url("/Assets/photo4.jpg"); }
+.photoBox1 { background-image: url("./Assets/photo2Desktop.png"); }
+.photoBox2 { background-image: url("./Assets/photo4.jpg"); }
 
 .photoBox1, .photoBox2 {
     width: 100%;
